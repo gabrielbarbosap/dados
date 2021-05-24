@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-10">
+            <form [formGroup]='fb' (ngSubmit)="onSubmit()">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input formControlName='email' matInput placeholder="Placeholder">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Senha</mat-label>
+                    <input formControlName='password' matInput>
+
+                </mat-form-field>
+                <button class="submit" type="submit" [disabled]="!fb.valid">er</button>
+
+            </form>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1>{{ 'demo.title' | translate }}</h1>
+
+    <!-- translation: translation pipe -->
+    <p>{{ 'demo.text' | translate }}</p>
+</div>
